@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--  -->
+    <div class="container">
+        <h3>Multiplication Table</h3>
+        <div class="inputContainer">
+            <label for="numberValue">Input Number</label>
+            <input type="number" name="numberValue" id="numberValue" min="-100" max="100">
+            <label for="range">Range</label>
+            <input type="number" name="range" id="range" min="0" max="100">
+        </div>
+        <input type="button" onclick="multiply()" value="Generate Table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Sign</th>
+                    <th>Multiplier</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="values" style="border: 2px solid orange;">$numberValues</td>
+                    <td class="sign" style="border: 2px solid red;"></td>
+                    <td class="ranges" style="border: 2px solid green;"></td>
+                    <td class="output" style="border: 2px solid blue;"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
