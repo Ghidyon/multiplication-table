@@ -15,16 +15,16 @@ function multiply() {
         alert('Input any number asides 0 to generate table.');
         return false;
     } else if (multiplierRange <= 0) {
-        alert('Cannot calculate numbers below 1 in the range field.');
+        alert('Input numbers above 0 in the range field.');
         return false;
     } else {
         for (i = 1; i <= Number(multiplierRange); i++) {
-            result = Number(numberValue) * i;
+            result = inputNumber * i;
             tableRow = document.createElement('tr');
             tableRow.innerHTML = `<td class="values" style="border: 2px solid orange;">${inputNumber}</td>
-            <td class="sign" style="border: 2px solid red;">${sign}</td>
-            <td class="ranges" style="border: 2px solid green;">${i}</td>
-            <td class="output" style="border: 2px solid blue;">${result}</td>`;
+                                  <td class="sign" style="border: 2px solid red;">${sign}</td>
+                                  <td class="ranges" style="border: 2px solid green;">${i}</td>
+                                  <td class="output" style="border: 2px solid blue;">${result}</td>`;
             document.querySelector('tbody').appendChild(tableRow);
         }
     }
