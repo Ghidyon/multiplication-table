@@ -5,12 +5,13 @@
 }
 
 body {
-    background-color: #233e5c;
+    background-color: #091921;
+    background-image: url(image/background.jpg);
+    background-size: contain;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
 }
 
 /* font-family: 'Quicksand', sans-serif; */
@@ -18,14 +19,14 @@ body {
     font-family: 'Helvetica Neue LT Std 55 Roman';
     font-style: normal;
     font-weight: normal;
-    src: url('HelveticaNeueLTStd55Roman_22526.woff');
+    src: url('fonts/HelveticaNeueLTStd55Roman_22526.woff');
     }
 
 @font-face {
         font-family: 'Helvetica Neue LT Std 45 Light';
         font-style: normal;
         font-weight: normal;
-        src: url('HelveticaNeueLTStd45Light_22520.woff');
+        src: url('fonts/HelveticaNeueLTStd45Light_22520.woff');
     }
 
 .container {
@@ -33,22 +34,24 @@ body {
 }
 
 h3 {
-    font-family: 'Bebas Neue', 'Helvetica Neue LT Std 55 Roman';
-    font-size: 5rem;
+    font-family: 'Bebas Neue', 'Arial';
+    font-size: 3.5rem;
+    letter-spacing: .5px;
     text-transform: uppercase;
     color: white;
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 2rem 0;
 }
 
 fieldset {
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 5px;
-    padding: 3rem 0;
+    width: 500px;
+    margin: 0 auto 3rem auto;
+    border-radius: 8px;
+    padding: 3.5rem 0 3rem 0;
     text-align: center;    
     font-family: 'Helvetica Neue LT Std 45 Light';
     background-color: white;
+    border: none;
 }
 
 .inputContainer {
@@ -64,7 +67,7 @@ fieldset {
 }
 
 .inputBox:nth-child(odd) {
-    margin-right: 5rem;
+    margin-right: 2.5rem;
 }
   
 .labelBox {
@@ -80,15 +83,15 @@ fieldset {
     position: absolute;
     bottom: 7px;
     left: 2px;
-    transition: all 0.3s ease;
     font-size: 1rem;
     background-color: white;
     color: #808080;
     padding: 0 .2rem;
+    transition: all 0.3s ease;
 }
   
 input[type=number] {
-    width: 200px;
+    width: 180px;
     padding-top: .8rem;
     padding-bottom: .5rem;
     padding-left: .5rem;
@@ -97,6 +100,7 @@ input[type=number] {
     font-size: 1.3rem;
     -moz-appearance: textfield;
     -webkit-appearance: none;
+    transition: all 0.3s ease;
 }
 
 input::-webkit-outer-spin-button,
@@ -114,6 +118,10 @@ input[type=number]:focus + .labelBox .labelContent,
 input[type=number]:valid + .labelBox .labelContent {
     transform: translateY(-190%);
     font-size: .8rem;
+}
+
+input[type=number]:focus + .labelBox .labelContent {
+    color: #1a73e8;
 }
  
 .btn {
@@ -139,13 +147,15 @@ table {
     width: fit-content;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 3rem;
     border-collapse: collapse;
 }
 
 thead tr {
-    background-color: gainsboro;    
+    background-color: #1a73e8;    
     font-family: 'Helvetica Neue LT Std 55 Roman';
     text-transform: uppercase;
+    color: white;
     border: 0;
 }
 
