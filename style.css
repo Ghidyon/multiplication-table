@@ -5,8 +5,13 @@
 }
 
 body {
-    background-color: #233e5c;    
-    text-align: center;
+    background-color: #233e5c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid brown;
+    color: black;
 }
 
 /* font-family: 'Quicksand', sans-serif; */
@@ -24,12 +29,63 @@ body {
         src: url('HelveticaNeueLTStd45Light_22520.woff');
     }
 
-h3 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 6rem;
-    color: white;
+.container {
+    width: 100%;
+    border: 2px solid blue;
 }
 
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+}
+
+fieldset {
+    border-radius: 5px;
+    /* padding: 3rem 2rem; */
+    background-color: springgreen;
+    margin: 0 auto;
+}
+
+.inputBox {
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    border: 2px solid salmon;
+}
+  
+input[type=number] {
+    width: 150px;
+    padding-top: 1rem;
+}
+  
+.labelBox {
+    display: inline-block;
+    position: absolute; 
+    bottom: 8px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+  
+.labelContent {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+  
+input[type=number]:focus + .labelBox .labelContent,
+input[type=number]:valid + .labelBox .labelContent {
+    transform: translateY(-100%);
+    font-size: .9rem;
+}
+   
+  
 table {
     display: none;
 }

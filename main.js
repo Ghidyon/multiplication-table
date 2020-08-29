@@ -1,7 +1,7 @@
 //Define variables for conditions
 let numberValue = document.querySelector('#numberValue'),
     multiplierRange = document.querySelector('#range'),
-    multiplicationTable = document.querySelector('table'),
+    multiplicationTable = document.querySelector('tbody'),
     generateBtn = document.querySelector('.btn'),
     table = document.querySelector('table');
 
@@ -35,7 +35,7 @@ function multiply() {
                                   <td class="sign" style="border: 2px solid red;">${sign}</td>
                                   <td class="ranges" style="border: 2px solid green;">${i}</td>
                                   <td class="output" style="border: 2px solid blue;">${result}</td>`;
-            document.querySelector('tbody').appendChild(tableRow);
+            multiplicationTable.appendChild(tableRow);
             table.style.display = "block";
             generateBtn.disabled = true;
         }
@@ -46,6 +46,7 @@ function multiply() {
 function clearAndEnable() {
     generateBtn.disabled = false;
     table.style.display = "none";
+    multiplicationTable.innerHTML = '';
 }
 
 //Events to clear tables and enable button

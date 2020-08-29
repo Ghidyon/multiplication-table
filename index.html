@@ -13,14 +13,26 @@
 <body>
     <!-- Input Fields -->
     <div class="container">
+
         <h3>Multiplication Table</h3>
-        <div class="inputContainer">
-            <label for="numberValue">Input Number</label>
-            <input type="number" name="numberValue" id="numberValue" min="-100" max="100">
-            <label for="range">Range</label>
-            <input type="number" name="range" id="range" min="0" max="100">
-        </div>
-        <input type="button" onclick="multiply()" value="Generate Table" class="btn">
+
+        <fieldset class="inputContainer">
+            <div class="inputBox">
+                <input type="number" name="numberValue" id="numberValue" autocomplete="off" required>
+                <label for="numberValue" class="labelBox">
+                    <span class="labelContent">Input Number</span>
+                </label>
+            </div>
+
+            <div class="inputBox">
+                <input type="number" name="range" id="range" autocomplete="off" required>
+                <label for="range" class="labelBox">
+                    <span class="labelContent">Range</span>
+                </label>
+            </div>
+
+            <input type="button" onclick="multiply()" value="Generate Table" class="btn">
+        </fieldset>
 
         <!-- Multiplication Table -->
         <table>
