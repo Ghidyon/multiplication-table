@@ -135,28 +135,29 @@ input[type=number]:valid + .labelBox .labelContent {
 }
 
 table {
+    display: none;
     width: fit-content;
-    display: block;
     text-align: center;
     margin: 0 auto;
     border-collapse: collapse;
 }
 
-thead, th {
-    background-color: white;
-    border-top: 1px solid black;
-    padding: 1rem 2rem;
+thead tr {
+    background-color: gainsboro;    
     font-family: 'Helvetica Neue LT Std 55 Roman';
     text-transform: uppercase;
     border: 0;
 }
 
-tbody {
-    border: 0;
+th, td {
+    padding: 1rem 2rem;
 }
 
-
-td {
-    padding: 1rem 2rem;
+tbody tr {
     background-color: white;
+    font-family: 'Helvetica Neue LT Std 45 Light';
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: gainsboro;
 }
