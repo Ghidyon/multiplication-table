@@ -10,7 +10,7 @@ function multiply() {
     range = Number(multiplierRange.value);
     sign = "\u00d7";
 
-    //Conditions to generate table
+    //Conditions for generation of table
     if (numberValue.value === "" && multiplierRange.value === "") {
         alert('Fill in the fields to generate table.');
         return false;
@@ -42,12 +42,12 @@ function multiply() {
     }
 }
 
-function enableBtn() {
+
+function clearAndEnable() {
     generateBtn.disabled = false;
     table.style.display = "none";
 }
 
-multiplierRange.addEventListener('keydown', enableBtn);
-numberValue.addEventListener('keydown', enableBtn);
-
-
+//Events to clear tables and enable button
+multiplierRange.addEventListener('keydown', clearAndEnable);
+numberValue.addEventListener('keydown', clearAndEnable);

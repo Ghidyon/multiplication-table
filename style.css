@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #233e5c;    
+    text-align: center;
+}
+
+/* font-family: 'Quicksand', sans-serif; */
+@font-face {
+    font-family: 'Helvetica Neue LT Std 55 Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: url('HelveticaNeueLTStd55Roman_22526.woff');
+    }
+
+@font-face {
+        font-family: 'Helvetica Neue LT Std 45 Light';
+        font-style: normal;
+        font-weight: normal;
+        src: url('HelveticaNeueLTStd45Light_22520.woff');
+    }
+
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 6rem;
+    color: white;
+}
+
+table {
+    display: none;
+}
