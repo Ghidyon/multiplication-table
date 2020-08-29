@@ -7,6 +7,7 @@ let numberValue = document.querySelector('#numberValue'),
 
 function multiply() {
     inputNumber = Number(numberValue.value);
+    range = Number(multiplierRange.value);
     sign = "\u00d7";
 
     //Conditions to generate table
@@ -26,8 +27,8 @@ function multiply() {
     }
 
     else {
-        //Loop through multiplier range for generation of table rows
-        for (i = 1; i <= inputNumber; i++) {
+        //Loop through range for generation of table rows
+        for (i = 1; i <= range; i++) {
             result = inputNumber * i;
             tableRow = document.createElement('tr');
             tableRow.innerHTML = `<td class="values" style="border: 2px solid orange;">${inputNumber}</td>
@@ -35,15 +36,15 @@ function multiply() {
                                   <td class="ranges" style="border: 2px solid green;">${i}</td>
                                   <td class="output" style="border: 2px solid blue;">${result}</td>`;
             document.querySelector('tbody').appendChild(tableRow);
+            table.style.display = "block";
+            generateBtn.disabled = true;
         }
-
-        //Disable button
-        generateBtn.disabled = true;
     }
 }
 
 function enableBtn() {
     generateBtn.disabled = false;
+    table.style.display = "none";
 }
 
 multiplierRange.addEventListener('keydown', enableBtn);
