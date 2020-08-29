@@ -31,10 +31,10 @@ function multiply() {
         for (i = 1; i <= range; i++) {
             result = inputNumber * i;
             tableRow = document.createElement('tr');
-            tableRow.innerHTML = `<td class="values" style="border: 2px solid orange;">${inputNumber}</td>
-                                  <td class="sign" style="border: 2px solid red;">${sign}</td>
-                                  <td class="ranges" style="border: 2px solid green;">${i}</td>
-                                  <td class="output" style="border: 2px solid blue;">${result}</td>`;
+            tableRow.innerHTML = `<td>${inputNumber}</td>
+                                  <td>${sign}</td>
+                                  <td>${i}</td>
+                                  <td>${result}</td>`;
             multiplicationTable.appendChild(tableRow);
             table.style.display = "block";
             generateBtn.disabled = true;
