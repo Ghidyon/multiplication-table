@@ -10,7 +10,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid brown;
     color: black;
 }
 
@@ -31,7 +30,6 @@ body {
 
 .container {
     width: 100%;
-    border: 2px solid blue;
 }
 
 h3 {
@@ -39,29 +37,36 @@ h3 {
     font-size: 5rem;
     color: white;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 fieldset {
+    width: 50%;
+    margin: 0 auto;
     border-radius: 5px;
-    /* padding: 3rem 2rem; */
-    background-color: springgreen;
+    padding: 2rem 0;
+    text-align: center;    
+    font-family: 'Helvetica Neue LT Std 45 Light';
+    background-color: white;
+}
+
+.inputContainer {
+    width: fit-content;
     margin: 0 auto;
 }
 
 .inputBox {
+    width: fit-content;
     display: inline-block;
     position: relative;
     width: fit-content;
-    border: 2px solid salmon;
 }
-  
-input[type=number] {
-    width: 150px;
-    padding-top: 1rem;
+
+.inputBox:nth-child(odd) {
+    margin-right: 5rem;
 }
   
 .labelBox {
-    display: inline-block;
     position: absolute; 
     bottom: 8px;
     left: 5px;
@@ -71,21 +76,47 @@ input[type=number] {
 }
   
 .labelContent {
-    background-color: white;
     position: absolute;
-    bottom: 0;
-    left: 5px;
+    bottom: 7px;
+    left: 2px;
     transition: all 0.3s ease;
     font-size: 1rem;
+    background-color: white;
+    padding: 0 .1rem;
 }
   
+input[type=number] {
+    width: 200px;
+    padding-top: .8rem;
+    padding-bottom: .5rem;
+    padding-left: .5rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+input[type=number]:focus {
+    outline: none;
+    border-radius: 5px;
+}
+
 input[type=number]:focus + .labelBox .labelContent,
 input[type=number]:valid + .labelBox .labelContent {
-    transform: translateY(-100%);
-    font-size: .9rem;
+    transform: translateY(-150%);
+    font-size: .8rem;
 }
-   
-  
+ 
+.btn {
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #233e5c;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 table {
     display: none;
 }
