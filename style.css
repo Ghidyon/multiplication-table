@@ -7,7 +7,9 @@
 body {
     background-color: #091921;
     background-image: url(image/background.jpg);
+    background-repeat: repeat;
     background-size: contain;
+    background-position: center;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -31,6 +33,8 @@ body {
 
 .container {
     width: 100%;
+    border: 1px solid silver;
+    overflow: hidden;
 }
 
 h3 {
@@ -44,7 +48,7 @@ h3 {
 }
 
 fieldset {
-    width: 500px;
+    width: 90%;
     margin: 0 auto 3rem auto;
     border-radius: 8px;
     padding: 3.5rem 0 3rem 0;
@@ -61,15 +65,11 @@ fieldset {
 
 .inputBox {
     width: fit-content;
-    display: inline-block;
+    display: block;
     position: relative;
     width: fit-content;
 }
 
-.inputBox:nth-child(odd) {
-    margin-right: 2.5rem;
-}
-  
 .labelBox {
     position: absolute; 
     bottom: 8px;
@@ -81,8 +81,8 @@ fieldset {
   
 .labelContent {
     position: absolute;
-    bottom: 7px;
-    left: 2px;
+    bottom: 12px;
+    left: 7px;
     font-size: 1rem;
     background-color: white;
     color: #808080;
@@ -91,21 +91,24 @@ fieldset {
 }
   
 input[type=number] {
-    width: 180px;
-    padding-top: .8rem;
-    padding-bottom: .5rem;
-    padding-left: .5rem;
+    width: 205px;
+    padding-top: 1rem;
+    padding-bottom: .8rem;
+    padding-left: .8rem;
     border: 2px solid #e0e0e0;
     border-radius: 5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     -moz-appearance: textfield;
-    -webkit-appearance: none;
     transition: all 0.3s ease;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.inputBox:nth-child(odd) {
+    margin-bottom: 2.5rem;
 }
 
 input[type=number]:focus {
@@ -116,8 +119,9 @@ input[type=number]:focus {
 
 input[type=number]:focus + .labelBox .labelContent,
 input[type=number]:valid + .labelBox .labelContent {
-    transform: translateY(-190%);
+    transform: translateY(-202%);
     font-size: .8rem;
+    left: 6px;
 }
 
 input[type=number]:focus + .labelBox .labelContent {
@@ -149,6 +153,9 @@ table {
     margin: 0 auto;
     margin-bottom: 3rem;
     border-collapse: collapse;
+    border: 0;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 thead tr {
@@ -156,11 +163,11 @@ thead tr {
     font-family: 'Helvetica Neue LT Std 55 Roman';
     text-transform: uppercase;
     color: white;
-    border: 0;
 }
 
 th, td {
     padding: 1rem 2rem;
+    margin: 0;
 }
 
 tbody tr {
@@ -170,4 +177,24 @@ tbody tr {
 
 tbody tr:nth-of-type(even) {
     background-color: gainsboro;
+}
+
+/* Responsive styling */
+@media screen and (min-width:576px) {
+    fieldset {
+        width: 500px;
+    }
+
+    .inputBox {
+        display: inline-block;
+    }
+
+    .inputBox:nth-child(odd) {
+        margin-right: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    input[type=number] {
+        width: 180px;
+    }
 }

@@ -26,6 +26,11 @@ function multiply() {
         return false;
     }
 
+    else if (multiplierRange.value > 100) {
+        alert('Maximum range value exceeded.');
+        return false;
+    }
+
     else {
         //Loop through range for generation of table rows
         for (i = 1; i <= range; i++) {
