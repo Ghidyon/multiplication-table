@@ -74,7 +74,7 @@ fieldset {
   
 .labelContent {
     position: absolute;
-    bottom: 19px;
+    bottom: 19.5px;
     left: 8px;
     font-size: 1rem;
     background-color: white;
@@ -112,7 +112,7 @@ input[type=number]:focus {
 
 input[type=number]:focus + .labelBox .labelContent,
 input[type=number]:valid + .labelBox .labelContent {
-    transform: translateY(-180%);
+    transform: translateY(-185%);
     font-size: .8rem;
     left: 7px;
 }
@@ -184,6 +184,10 @@ tbody tr:nth-of-type(even) {
         width: 500px;
     }
 
+    .labelContent {
+        bottom: 19px;
+    }
+
     .inputBox {
         display: inline-block;
         width: fit-content;
@@ -198,12 +202,7 @@ tbody tr:nth-of-type(even) {
     input[type=number] {
         width: 180px;
     }
-
-    input[type=number]:focus + .labelBox .labelContent,
-    input[type=number]:valid + .labelBox .labelContent {
-        transform: translateY(-190%);
-    }
-
+    
     .btn {
         font-size: 1rem;
     }
