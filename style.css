@@ -39,7 +39,7 @@ body {
 
 h3 {
     font-family: 'Bebas Neue', 'Arial';
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: .5px;
     text-transform: uppercase;
     color: white;
@@ -58,16 +58,11 @@ fieldset {
     border: none;
 }
 
-.inputContainer {
-    width: fit-content;
-    margin: 0 auto;
-}
-
 .inputBox {
-    width: fit-content;
+    width: 80%;
     display: block;
     position: relative;
-    width: fit-content;
+    margin: 0 auto;
 }
 
 .labelBox {
@@ -91,7 +86,7 @@ fieldset {
 }
   
 input[type=number] {
-    width: 205px;
+    width: 100%;
     padding-top: 1rem;
     padding-bottom: .8rem;
     padding-left: .8rem;
@@ -139,11 +134,16 @@ input[type=number]:focus + .labelBox .labelContent {
     padding: 1rem 1.5rem;
     border: 0;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .btn:disabled {
     opacity: .5;
+}
+
+.tableScroll {
+    display: block;
+    overflow-x: auto;
 }
 
 table {
@@ -153,9 +153,6 @@ table {
     margin: 0 auto;
     margin-bottom: 3rem;
     border-collapse: collapse;
-    border: 0;
-    overflow-x: auto;
-    white-space: nowrap;
 }
 
 thead tr {
@@ -166,8 +163,7 @@ thead tr {
 }
 
 th, td {
-    padding: 1rem 2rem;
-    margin: 0;
+    padding: 1rem;
 }
 
 tbody tr {
@@ -181,13 +177,19 @@ tbody tr:nth-of-type(even) {
 
 /* Responsive styling */
 @media screen and (min-width:576px) {
+    h3 {
+        font-size: 3.5rem;
+    }
+
     fieldset {
         width: 500px;
     }
 
     .inputBox {
         display: inline-block;
-    }
+        width: fit-content;
+        margin: 0;
+    }    
 
     .inputBox:nth-child(odd) {
         margin-right: 2.5rem;
@@ -196,5 +198,13 @@ tbody tr:nth-of-type(even) {
 
     input[type=number] {
         width: 180px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: 1rem 2rem;
     }
 }
