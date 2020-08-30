@@ -112,7 +112,7 @@ input[type=number]:focus {
 
 input[type=number]:focus + .labelBox .labelContent,
 input[type=number]:valid + .labelBox .labelContent {
-    transform: translateY(-190%);
+    transform: translateY(-180%);
     font-size: .8rem;
     left: 7px;
 }
@@ -197,6 +197,11 @@ tbody tr:nth-of-type(even) {
 
     input[type=number] {
         width: 180px;
+    }
+
+    input[type=number]:focus + .labelBox .labelContent,
+    input[type=number]:valid + .labelBox .labelContent {
+        transform: translateY(-190%);
     }
 
     .btn {
