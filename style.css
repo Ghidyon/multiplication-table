@@ -67,8 +67,8 @@ fieldset {
 
 .labelBox {
     position: absolute; 
-    bottom: 8px;
-    left: 5px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -76,8 +76,8 @@ fieldset {
   
 .labelContent {
     position: absolute;
-    bottom: 12px;
-    left: 7px;
+    bottom: 19px;
+    left: 8px;
     font-size: 1rem;
     background-color: white;
     color: #808080;
@@ -89,7 +89,7 @@ input[type=number] {
     width: 100%;
     padding-top: 1rem;
     padding-bottom: .8rem;
-    padding-left: .8rem;
+    padding-left: .6rem;
     border: 2px solid #e0e0e0;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -114,16 +114,16 @@ input[type=number]:focus {
 
 input[type=number]:focus + .labelBox .labelContent,
 input[type=number]:valid + .labelBox .labelContent {
-    transform: translateY(-202%);
+    transform: translateY(-190%);
     font-size: .8rem;
-    left: 6px;
+    left: 7px;
 }
 
 input[type=number]:focus + .labelBox .labelContent {
     color: #1a73e8;
 }
- 
-.btn {
+
+.btn {    
     margin-top: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -144,6 +144,7 @@ input[type=number]:focus + .labelBox .labelContent {
 .tableScroll {
     display: block;
     overflow-x: auto;
+    margin: 0 auto;
 }
 
 table {
