@@ -74,7 +74,7 @@ fieldset {
   
 .labelContent {
     position: absolute;
-    bottom: 19.2px;
+    bottom: 18.7px;
     left: 8px;
     font-size: 1rem;
     background-color: white;
@@ -185,7 +185,7 @@ tbody tr:nth-of-type(even) {
     }
 
     .labelContent {
-        bottom: 18px;
+        bottom: 17.5px;
     }
 
     .inputBox {
