@@ -16,7 +16,6 @@ body {
     align-items: center;
 }
 
-/* font-family: 'Quicksand', sans-serif; */
 @font-face {
     font-family: 'Helvetica Neue LT Std 55 Roman';
     font-style: normal;
@@ -151,14 +150,20 @@ table {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 3rem;
-    border-collapse: collapse;
+    border-collapse: collapse!important;
+    border-style: hidden;
+    background: white;
 }
 
 thead tr {
-    background-color: #1a73e8;    
     font-family: 'Helvetica Neue LT Std 55 Roman';
     text-transform: uppercase;
     color: white;
+}
+
+th {
+  background-color: #1a73e8;
+  border: 1px solid #1a73e8;
 }
 
 th, td {
@@ -166,8 +171,8 @@ th, td {
 }
 
 tbody tr {
-    background-color: white;
     font-family: 'Helvetica Neue LT Std 45 Light';
+    background-color: white;
 }
 
 tbody tr:nth-of-type(even) {
