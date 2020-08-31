@@ -208,6 +208,10 @@ tbody tr:nth-of-type(even) {
     input[type=number] {
         width: 180px;
     }
+
+    .labelContent {
+        bottom: 19px;
+    }
     
     .btn {
         font-size: 1rem;
