@@ -12,8 +12,18 @@ function multiply() {
 
     //Conditions for generation of table
     if (numberValue.value === "" && multiplierRange.value === "") {
-        alert('Fill in the fields to generate table.');
+        alert('Fill in fields to generate table.');
         return false;
+    }
+    
+    else if (numberValue.value === "") {
+      alert('Input a value for "input number".');
+      return false;
+    }
+    
+    else if (multiplierRange.value === "") {
+      alert('Input a value for "range".');
+      return false;
     }
 
     else if (numberValue.value == 0 && multiplierRange.value == 0) {

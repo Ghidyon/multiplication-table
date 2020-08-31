@@ -35,7 +35,7 @@ body {
 }
 
 h3 {
-    font-family: 'Bebas Neue', 'Arial';
+    font-family: 'Bebas Neue', serif;
     font-size: 2.5rem;
     letter-spacing: .5px;
     text-transform: uppercase;
@@ -128,10 +128,11 @@ input[type=number]:focus + .labelBox .labelContent {
     outline: none;
     color: white;
     cursor: pointer;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem .8rem 1.5rem;
     border: 0;
     border-radius: 5px;
     font-size: .8rem;
+    font-family: 'Helvetica Neue LT Std 55 Roman';
 }
 
 .btn:disabled {
@@ -210,6 +211,7 @@ tbody tr:nth-of-type(even) {
     
     .btn {
         font-size: 1rem;
+        padding: 1.2rem 1.7rem .9rem 1.7rem;
     }
 
     th, td {
