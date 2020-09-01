@@ -132,7 +132,7 @@ input[type=number]:focus + .labelBox .labelContent {
     border: 0;
     border-radius: 5px;
     font-size: .8rem;
-    font-family: 'Helvetica Neue LT Std 55 Roman';
+    font-family: 'Helvetica Neue LT Std 55 Roman'!important;
 }
 
 .btn:disabled {
