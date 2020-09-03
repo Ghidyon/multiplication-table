@@ -176,7 +176,7 @@ tbody tr {
     background-color: white;
 }
 
-tbody tr:nth-of-type(even) {
+tbody tr:nth-child(even) {
     background-color: gainsboro;
 }
 
