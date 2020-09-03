@@ -6,45 +6,45 @@ let numberValue = document.querySelector('#numberValue'),
     table = document.querySelector('table');
 
 function multiply() {
-    inputNumber = Number(numberValue.value);
-    range = Number(multiplierRange.value);
+    inputNumber = numberValue.value;
+    range = multiplierRange.value;
     sign = "\u00d7";
 
     //Conditions for generation of table
-    if (numberValue.value === "" && multiplierRange.value === "") {
+    if (inputNumber === "" && range === "") {
         alert('Fill out fields to generate table.');
         return false;
     }
 
-    else if (numberValue.value === "") {
+    else if (inputNumber === "") {
         alert('Input a value for "input number".');
         return false;
     }
 
-    else if (multiplierRange.value === "") {
+    else if (range === "") {
         alert('Input a value for "range".');
         return false;
     }
 
-    else if (numberValue.value == 0 && multiplierRange.value == 0) {
+    else if (inputNumber == 0 && range == 0) {
         alert('Input any number asides 0 to generate table.');
         return false;
     }
 
-    else if (multiplierRange.value <= 0) {
+    else if (range <= 0) {
         alert('Input numbers above 0 in the range field.');
         return false;
     }
 
-    else if (multiplierRange.value > 100) {
+    else if (range > 100) {
         alert('Maximum range value exceeded.');
         return false;
     }
 
     else {
         //Loop through range for generation of table rows
-        for (i = 1; i <= range; i++) {
-            result = inputNumber * i;
+        for (i = 1; i <= Number(range); i++) {
+            result = Number(inputNumber) * i;
             tableRow = document.createElement('tr');
             tableRow.innerHTML = `<td>${inputNumber}</td>
                                   <td>${sign}</td>
