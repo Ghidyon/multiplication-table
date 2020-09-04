@@ -1,9 +1,9 @@
 //Define variables for conditions
-let numberValue = document.querySelector('#numberValue'),
-    multiplierRange = document.querySelector('#range'),
-    multiplicationTable = document.querySelector('tbody'),
-    generateBtn = document.querySelector('.btn'),
-    table = document.querySelector('table');
+const numberValue = document.querySelector('#numberValue');
+const multiplierRange = document.querySelector('#range');
+const multiplicationTable = document.querySelector('tbody');
+const generateBtn = document.querySelector('.btn');
+const table = document.querySelector('table');
 
 function multiply() {
     inputNumber = numberValue.value;
