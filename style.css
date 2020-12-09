@@ -7,8 +7,9 @@
 body {
     background-color: #091921;
     background-image: url(image/background.jpg);
-    background-repeat: repeat;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-position: center;
     min-height: 100vh;
     display: flex;
