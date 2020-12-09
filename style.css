@@ -6,7 +6,7 @@
 
 body {
     background-color: #091921;
-    background-image: url(image/background.jpg);
+    background-image: url('image/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

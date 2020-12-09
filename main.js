@@ -57,6 +57,11 @@ function multiply() {
     }
 }
 
+multiplierRange.addEventListener('keyup', e => {
+    if (e.keyCode === 13) {
+        multiply();
+    }
+})
 
 function clearAndEnable() {
     generateBtn.disabled = false;
